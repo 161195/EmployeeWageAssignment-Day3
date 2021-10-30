@@ -1,25 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace EmployeeWageComputation
+namespace EmployeeWageAssignment
 {
     class Program
     {
-        static void Main(string[] args)
+       static void Main(string[] args)
         {
-            EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
-            empWageBuilder.addCompanyEmpWage("Fauresia", 2, 3, 5);
-            empWageBuilder.addCompanyEmpWage("Indoshottle", 5, 40, 6);
-
-
+            //creating an array class object
+            //calling all the necessary methods of different classes
+            EmpWageBuilder empWageBuilder = new EmpWageBuilder();
+            empWageBuilder.addCompanyEmpWage("Indoshottle", 4, 7, 30);
+            empWageBuilder.addCompanyEmpWage("Faurecia", 5, 30, 25);
+            empWageBuilder.addCompanyEmpWage("Titan", 5, 20, 35);
             empWageBuilder.computeEmpWage();
+            Console.WriteLine("The total wage for Indoshottle company is :" + empWageBuilder.getTotalWage("Indoshottle"));   //this line queries the total emp wage by the name of the company
         }
     }
 }
